@@ -48,7 +48,27 @@
 - Docker / k8s 自体にも脆弱性は出てくる
 
 
-##
+## Dockerfile のベストプラクティス
+- docs.docker.com で公開されている
+- 1つずつ解説していた
+    - ADD と RUN,COPY ではキャッシュの条件が異なる
+    
+## GitOps で始める Kubernetes CI/CD Pipeline
+- manifest ファイルの git 管理
+- CIOps は問題点も提唱されている
+    - 複雑なパイプラインやクレデンシャルなど
+    - CI がパイプラインの最後に k8s にデプロイするのはアンチパターンかも？
+- 機密情報（secret）の扱い
+- リソースの削除
+    - git で消しても残る可能性がある
+- GitOps を謳うツール
+    - argo / weave flux / Jenkins X
+- 感想：Spinnaker と GitOps の比較になる？
+
+
+
+
+
 
 
 
