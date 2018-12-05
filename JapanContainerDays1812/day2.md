@@ -66,9 +66,16 @@
 - 感想：Spinnaker と GitOps の比較になる？
 
 
-
-
-
+## showKs の舞台裏
+- k8s の CI/CD をユーザー参加型で体験してもらう
+- どんどん構成が複雑化
+- PWA/SSR/BFF by Nuxt.js/Node.js etc...
+- CI/CD/GitOps by Concourse/Spinnaker etc...
+- クラウドネイティブで、Microservices 開発プロジェクトのオーナー体験をしてもらう
+- 感想
+    - これ追っかけるだけでだいぶ知識つく
+    - 使われている技術スタックすごすぎる
+    
 
 
 
