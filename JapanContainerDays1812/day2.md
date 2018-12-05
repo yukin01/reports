@@ -27,5 +27,30 @@
 - etc...
 
 ## Docker セキュリティ
+- プライベートリポジトリを用いるビルド
+    - BuildKit 有効化 `export DOCKER=BUILDKIT=1`
+    - `docker build --secret` および `docker build --ssh`
+    - 詳しくは htts://github.com/moby/buildkit
+        - なるべく早く Docker 18.09 に移行すべき
+- イメージスキャナ
+    - Microscanner / Clair etc...
+    - どれが優れているとは一概には言えない
+    - 依存パッケージを減らしてシンプルなイメージを作ることが重要
+    - Seccomp / Apparmor / SELinux
+- Docker ソケットを保護
+    - TLS を適切に設定するのは難しいので SSH で保護する
+- ランタイム
+    - 基本的には Namespaces, Capabilities, Cgroups でできている
+    - バインドマウントには注意が必要
+    - コンテナ内の実行ユーザを指定する
+        - dockerd --userns-remap というオプションがある
+        - Rootless モードがこれから使えるようになる
+- Docker / k8s 自体にも脆弱性は出てくる
+
 
 ##
+
+
+
+
+
